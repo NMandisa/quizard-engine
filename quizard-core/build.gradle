@@ -1,0 +1,60 @@
+plugins {
+    id 'java'
+}
+
+description = 'quizard-core'
+group = 'za.co.mkhungo.quizard.core'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation ('org.springframework.security:spring-security-core:6.3.1'){
+        exclude module: 'commons-logging'
+    }
+    implementation ('org.springframework.security:spring-security-config:6.3.1'){
+        exclude module: 'commons-logging'
+    }
+
+    //Spring Data Dependencies
+    implementation(group:'org.springframework',name:'spring-orm',version:'6.1.11') {
+        exclude module: 'commons-logging'
+    }
+    implementation(group: 'org.springframework.data', name: 'spring-data-commons', version: '3.3.2'){
+        exclude(module: 'commons-logging')
+    }
+    implementation (group: 'org.springframework.data', name: 'spring-data-jpa', version: '3.3.2'){
+        exclude(module: 'commons-logging')
+    }
+
+    //Hibernate dependency
+    implementation group: 'org.hibernate.orm', name: 'hibernate-core', version: '6.5.2.Final'
+    implementation group: 'org.hibernate.orm', name: 'hibernate-hikaricp', version: '6.5.2.Final'
+    implementation(group: 'org.hibernate.validator', name: 'hibernate-validator', version: '8.0.1.Final')
+
+    //Jakarta Dependencies
+    implementation(group: 'jakarta.transaction', name: 'jakarta.transaction-api', version: '2.0.1')
+    implementation(group: 'jakarta.persistence', name: 'jakarta.persistence-api', version: '3.1.0')
+    implementation(group: 'jakarta.xml.bind', name: 'jakarta.xml.bind-api', version: '4.0.1')
+    implementation(group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.0.2')
+    implementation(group: 'jakarta.el', name: 'jakarta.el-api', version: '6.0.0-M1')
+
+    //GlassFish Dependencies
+    implementation (group:'org.glassfish.expressly',name:'expressly',version:'6.0.0-M1')
+
+
+    //Database Dependencies
+    runtimeOnly(group: 'com.mysql', name: 'mysql-connector-j', version: '8.2.0')
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.springframework.security:spring-security-test:6.3.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
