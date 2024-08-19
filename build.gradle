@@ -52,9 +52,17 @@ subprojects {
         implementation (group :'org.springframework',name:'spring-aspects',version:'6.1.11'){
             exclude(module: 'commons-logging')
         }
-        implementation(group: 'org.springframework', name: 'spring-context', version: '6.1.11') {
+        implementation ('org.springframework.cloud:spring-cloud-context:4.1.4'){
             exclude(module: 'commons-logging')
         }
+        implementation ('org.springframework.cloud:spring-cloud-commons:4.1.4'){
+            exclude(module: 'commons-logging')
+        }
+
+
+        /*implementation(group: 'org.springframework', name: 'spring-context', version: '6.1.11') {
+            exclude(module: 'commons-logging')
+        }*/
         implementation(group: 'org.springframework', name: 'spring-beans', version: '6.1.11') {
             exclude(module: 'commons-logging')
         }
