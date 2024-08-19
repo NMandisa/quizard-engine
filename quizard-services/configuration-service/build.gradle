@@ -1,7 +1,3 @@
-plugins {
-    id 'java'
-}
-
 description='configuration-service'
 group = 'za.co.mkhungo.quizard.service'
 version = '0.0.1-SNAPSHOT'

@@ -13,7 +13,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <mvc:annotation-driven />
-    <context:component-scan base-package="za.co.mkhungo.quizard.service" />
+    <context:component-scan base-package="za.co.mkhungo.quizard.configuration.rest" />
     <import resource="classpath:META-INF/configuration-service-context.xml" />
     <!-- Message bundle -->
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">

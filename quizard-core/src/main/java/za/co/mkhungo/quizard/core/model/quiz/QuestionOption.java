@@ -1,4 +1,4 @@
-package za.co.mkhungo.quizard.core.model;
+package za.co.mkhungo.quizard.core.model.quiz;
 
 import jakarta.persistence.*;
 import lombok.Getter;

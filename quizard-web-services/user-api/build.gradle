@@ -1,4 +1,4 @@
-group = 'za.co.mkhungo.quizard.rest'
+group = 'za.co.mkhungo.quizard.user.rest'
 version = '0.0.1-SNAPSHOT'
 
 dependencies {

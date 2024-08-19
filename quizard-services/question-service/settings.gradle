@@ -1,2 +1,2 @@
 parent.project('quizard-services')
-rootProject.name='user-service'
+rootProject.name='question-service'

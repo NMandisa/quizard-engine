@@ -1,6 +1,8 @@
 package za.co.mkhungo.quizard.core.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import za.co.mkhungo.quizard.core.model.quiz.QuizSchedule;
 
 import java.sql.Time;
@@ -8,25 +10,28 @@ import java.sql.Time;
 /**
  * @author Noxolo.Mkhungo
  */
+@Getter
+@Setter
 @Entity
 @Table(name = "Reminders")
 public class Reminder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long reminderId;
+    @Column(name = "reminder_id")
+    private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "Quiz_Schedule_ID")
+    @JoinColumn(name = "quiz_schedule_id")
     private QuizSchedule quizSchedule;
 
     @ManyToOne
-    @JoinColumn(name = "User_ID")
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "Reminder_Type_ID")
+    @JoinColumn(name = "reminder_yype_id")
     private ReminderType reminderType;
 
-    @Column(name = "Reminder_Scheduled_Time")
+    @Column(name = "reminder_scheduled_time")
     private Time reminderScheduledTime;
 }

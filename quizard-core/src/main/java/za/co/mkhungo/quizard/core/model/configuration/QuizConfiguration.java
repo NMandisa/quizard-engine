@@ -9,14 +9,15 @@ import za.co.mkhungo.quizard.core.model.quiz.QuizMode;
  * @author Noxolo.Mkhungo
  */
 @Entity
-@Table(name = "quiz_configurations", uniqueConstraints = {
+@Table(name = "quiz_configuration", uniqueConstraints = {
         @UniqueConstraint(columnNames = {"quiz_id", "quiz_mode_id", "quiz_configuration_type"})
 })
 public class QuizConfiguration {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int quizConfigurationId;
+    @Column(name = "quiz_configuration_id")
+    private long id;
 
     @ManyToOne
     @JoinColumn(name = "quiz_id", nullable = false)

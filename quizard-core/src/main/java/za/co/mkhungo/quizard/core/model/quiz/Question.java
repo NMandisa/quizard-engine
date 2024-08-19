@@ -1,7 +1,7 @@
-package za.co.mkhungo.quizard.core.model;
+package za.co.mkhungo.quizard.core.model.quiz;
 
 import jakarta.persistence.*;
-import za.co.mkhungo.quizard.core.model.quiz.Answer;
+import za.co.mkhungo.quizard.core.model.Quiz;
 
 import java.util.List;
 

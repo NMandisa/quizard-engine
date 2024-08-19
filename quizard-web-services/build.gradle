@@ -2,6 +2,17 @@ description='quizard-web-services'
 group = 'za.co.mkhungo.quizard'
 version = '0.0.1-SNAPSHOT'
 
+allprojects {
+    description='quizard-web-services'
+    group = 'za.co.mkhungo.quizard'
+    version = '0.0.1-SNAPSHOT'
+
+    java{
+        withSourcesJar()
+        withJavadocJar()
+    }
+}
+
 subprojects {
     apply plugin: 'war'
 

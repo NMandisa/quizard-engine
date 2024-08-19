@@ -1,0 +1,2 @@
+parent.project('quizard-services')
+rootProject.name='question-option-service'

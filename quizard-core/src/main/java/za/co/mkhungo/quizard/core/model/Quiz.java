@@ -1,7 +1,11 @@
 package za.co.mkhungo.quizard.core.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import za.co.mkhungo.quizard.core.model.quiz.Answer;
 import za.co.mkhungo.quizard.core.model.quiz.Category;
+import za.co.mkhungo.quizard.core.model.quiz.Question;
 import za.co.mkhungo.quizard.core.model.quiz.QuizSession;
 
 import java.util.List;
@@ -9,6 +13,8 @@ import java.util.List;
 /**
  * @author Noxolo.Mkhungo
  */
+@Getter
+@Setter
 @Entity
 @Table(name = "quiz")
 public class Quiz {
@@ -24,7 +30,7 @@ public class Quiz {
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "category_ID")
+    @JoinColumn(name = "category_id")
     private Category category;
 
     @ManyToOne
@@ -36,4 +42,7 @@ public class Quiz {
 
     @OneToMany(mappedBy = "quiz")
     private List<QuizSession> gameSession;
+
+    @OneToMany(mappedBy = "quiz")
+    private List<Answer> answers;
 }

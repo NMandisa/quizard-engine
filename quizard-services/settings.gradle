@@ -1,3 +1,10 @@
 parent.project('quizard-engine')
 rootProject.name='quizard-services'
+include('configuration-service')
 include('leaderboard-service')
+include('question-option-service')
+include('question-service')
+include('quiz-service')
+include('reward-service')
+include('social-sharing-service')
+include('user-service')

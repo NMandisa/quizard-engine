@@ -1,6 +1,8 @@
 package za.co.mkhungo.quizard.core.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import za.co.mkhungo.quizard.core.model.leaderboard.Achievement;
 import za.co.mkhungo.quizard.core.model.quiz.Answer;
 import za.co.mkhungo.quizard.core.model.quiz.QuizSession;
@@ -10,21 +12,24 @@ import java.util.List;
 /**
  * @author Noxolo.Mkhungo
  */
+@Getter
+@Setter
 @Entity
 @Table(name = "Users")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userId;
+    @Column(name = "user_id")
+    private Long id;
 
-    @Column(name = "Username")
+    @Column(name = "username")
     private String username;
 
-    @Column(name = "Password")
+    @Column(name = "password")
     private String password;
 
-    @Column(name = "Email")
+    @Column(name = "email")
     private String email;
 
     @OneToMany(mappedBy = "createdBy")

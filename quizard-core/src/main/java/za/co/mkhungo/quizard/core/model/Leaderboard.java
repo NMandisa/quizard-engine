@@ -1,18 +1,22 @@
 package za.co.mkhungo.quizard.core.model;
 
 import jakarta.persistence.*;
+import lombok.*;
 import za.co.mkhungo.quizard.core.model.quiz.QuizSession;
 
 /**
  * @author Noxolo.Mkhungo
  */
+@Getter
+@Setter
 @Entity
 @Table(name = "Leaderboard")
 public class Leaderboard {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long leaderboardId;
+    @Column(name = "leaderboard_id")
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "quiz_id")

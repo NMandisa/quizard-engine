@@ -1,7 +1,7 @@
 package za.co.mkhungo.quizard.core.model.quiz;
 
 import jakarta.persistence.*;
-import za.co.mkhungo.quizard.core.model.Question;
+import za.co.mkhungo.quizard.core.model.Quiz;
 import za.co.mkhungo.quizard.core.model.User;
 
 /**
@@ -21,6 +21,10 @@ public class Answer {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "quiz_id")
+    private Quiz quiz;
 
     @Column(name = "answer_text")
     private String answerText;

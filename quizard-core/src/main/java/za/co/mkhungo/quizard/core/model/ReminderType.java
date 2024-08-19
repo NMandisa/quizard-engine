@@ -1,11 +1,14 @@
 package za.co.mkhungo.quizard.core.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author Noxolo.Mkhungo
  */
-
+@Getter
+@Setter
 @Entity
 @Table(name = "Reminder_Types")
 public class ReminderType {

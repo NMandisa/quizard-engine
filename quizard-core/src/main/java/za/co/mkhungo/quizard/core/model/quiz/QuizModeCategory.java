@@ -20,5 +20,5 @@ public class QuizModeCategory {
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long quizModeCategoryId;
 
-   private String quizModeCategory;
+   private String modeCategory;
 }
