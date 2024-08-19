@@ -1,0 +1,6 @@
+group = 'za.co.mkhungo.quizard.rest'
+version = '0.0.1-SNAPSHOT'
+
+dependencies {
+    implementation project(':quizard-services:user-service')
+}

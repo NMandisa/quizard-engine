@@ -1,0 +1,7 @@
+parent.project('quizard-engine')
+rootProject.name='quizard-web-services'
+include('configuration-api')
+include('leaderboard-api')
+include('quiz-api')
+include('social-sharing-api')
+include('user-api')

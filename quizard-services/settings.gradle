@@ -1,0 +1,3 @@
+parent.project('quizard-engine')
+rootProject.name='quizard-services'
+include('leaderboard-service')
