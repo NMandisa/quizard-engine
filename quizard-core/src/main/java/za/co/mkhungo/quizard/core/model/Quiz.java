@@ -8,6 +8,7 @@ import za.co.mkhungo.quizard.core.model.quiz.Category;
 import za.co.mkhungo.quizard.core.model.quiz.Question;
 import za.co.mkhungo.quizard.core.model.quiz.QuizSession;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ import java.util.List;
 @Setter
 @Entity
 @Table(name = "quiz")
-public class Quiz {
+public class Quiz implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

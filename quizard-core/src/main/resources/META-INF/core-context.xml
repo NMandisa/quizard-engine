@@ -12,18 +12,26 @@
     http://www.springframework.org/schema/tx
     http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+    <context:property-placeholder properties-ref="yamlProperties"/>
 
-    <import resource="spring-datasource.xml"/>
-    <context:property-placeholder location="classpath:core.properties"/>
     <context:annotation-config />
     <context:component-scan base-package="za.co.mkhungo.quizard.core"/>
 
     <context:component-scan base-package="za.co.mkhungo.quizard.core.repository">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
     </context:component-scan>
-
-
     <tx:annotation-driven/>
+
+    <import resource="spring-datasource.xml"/>
+    <import resource="security-context.xml"/>
+
+    <!-- Load YAML properties -->
+    <bean id="yamlProperties" class="org.springframework.beans.factory.config.YamlPropertiesFactoryBean">
+        <property name="resources" value="classpath:core.yml"/>
+    </bean>
+    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+        <property name="properties" ref="yamlProperties"/>
+    </bean>
 
 
     <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">

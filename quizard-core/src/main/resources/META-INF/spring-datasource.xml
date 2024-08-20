@@ -8,14 +8,11 @@
     http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/data/jpa
-    https://www.springframework.org/schema/data/jpa/spring-jpa.xsd
-    http://www.springframework.org/schema/context
-    http://www.springframework.org/schema/context/spring-context.xsd">
+    https://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
 
-    <context:property-placeholder location="classpath:core.properties" />
     <jpa:repositories base-package="za.co.mkhungo.quizard.core.repository" entity-manager-factory-ref="entityManagerFactory" transaction-manager-ref="transactionManager"/>
-    <!--<jpa:auditing auditor-aware-ref="springSecurityAuditorAware" />-->
+    <jpa:auditing auditor-aware-ref="springSecurityAuditorAware" />
 
     <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"  destroy-method="close" primary="true">
         <constructor-arg ref="hikariConfig" />
@@ -62,5 +59,6 @@
     </bean>
 
     <bean id="persistenceExceptionTranslationPostProcessor" class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+    <bean id="springSecurityAuditorAware" class="za.co.mkhungo.quizard.core.SpringSecurityAuditorAware"/>
 
 </beans>
