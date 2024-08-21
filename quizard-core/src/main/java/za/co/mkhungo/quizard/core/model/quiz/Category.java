@@ -1,6 +1,8 @@
 package za.co.mkhungo.quizard.core.model.quiz;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import za.co.mkhungo.quizard.core.model.Quiz;
 
 import java.util.List;
@@ -8,15 +10,18 @@ import java.util.List;
 /**
  * @author Noxolo.Mkhungo
  */
+@Getter
+@Setter
 @Entity
 @Table(name = "quiz_category")
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long categoryId;
+    @Column(name = "category_id")
+    private Long id;
 
-    @Column(name = "Category_Name")
-    private String categoryName;
+    @Column(name = "category_name")
+    private String name;
 
     @OneToMany(mappedBy = "category")
     private List<Quiz> quizzes;

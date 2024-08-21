@@ -1,0 +1,64 @@
+{
+  "quiz": {
+    "title": "My Quiz",
+    "description": "This is a sample quiz",
+    "questions": [
+      {
+        "questionId": 1,
+        "text": "What is the capital of France?",
+        "type": "multiple-choice",
+        "options": [
+          {
+            "optionId": 1,
+            "text": "Paris",
+            "correct": true
+          },
+          {
+            "optionId": 2,
+            "text": "London",
+            "correct": false
+          },
+          {
+            "optionId": 3,
+            "text": "Berlin",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "questionId": 2,
+        "text": "What is the largest planet in our solar system?",
+        "type": "multiple-choice",
+        "options": [
+          {
+            "optionId": 1,
+            "text": "Earth",
+            "correct": false
+          },
+          {
+            "optionId": 2,
+            "text": "Saturn",
+            "correct": false
+          },
+          {
+            "optionId": 3,
+            "text": "Jupiter",
+            "correct": true
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "questionId": 1,
+        "optionId": 1,
+        "selected": true
+      },
+      {
+        "questionId": 2,
+        "optionId": 3,
+        "selected": true
+      }
+    ]
+  }
+}

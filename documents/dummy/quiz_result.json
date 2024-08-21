@@ -1,0 +1,25 @@
+{
+  "quizResult": {
+    "quizId": 1,
+    "score": 80,
+    "result": "pass",
+    "details": {
+      "correctAnswers": 8,
+      "incorrectAnswers": 2,
+      "questions": [
+        {
+          "questionId": 1,
+          "correct": true
+        },
+        {
+          "questionId": 2,
+          "correct": false
+        },
+        {
+          "questionId": 3,
+          "correct": true
+        }
+      ]
+    }
+  }
+}

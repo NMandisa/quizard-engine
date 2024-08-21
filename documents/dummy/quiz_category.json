@@ -1,0 +1,87 @@
+{
+  "categories": [
+    {
+      "categoryId": 1,
+      "name": "History",
+      "description": "Quiz questions about historical events",
+      "subCategories": [
+        {
+          "subCategoryId": 1,
+          "name": "World War II",
+          "description": "Quiz questions about World War II",
+          "questions": [
+            {
+              "questionId": 1,
+              "text": "What year did World War II start?",
+              "options": [
+                {
+                  "optionId": 1,
+                  "text": "1939",
+                  "correct": true
+                },
+                {
+                  "optionId": 2,
+                  "text": "1945",
+                  "correct": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 2,
+          "name": "Ancient Civilizations",
+          "description": "Quiz questions about ancient civilizations",
+          "questions": [
+            {
+              "questionId": 2,
+              "text": "What was the capital of the Roman Empire?",
+              "options": [
+                {
+                  "optionId": 1,
+                  "text": "Rome",
+                  "correct": true
+                },
+                {
+                  "optionId": 2,
+                  "text": "Athens",
+                  "correct": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": 2,
+      "name": "Science",
+      "description": "Quiz questions about science",
+      "subCategories": [
+        {
+          "subCategoryId": 1,
+          "name": "Biology",
+          "description": "Quiz questions about biology",
+          "questions": [
+            {
+              "questionId": 3,
+              "text": "What is the process by which plants make food?",
+              "options": [
+                {
+                  "optionId": 1,
+                  "text": "Respiration",
+                  "correct": false
+                },
+                {
+                  "optionId": 2,
+                  "text": "Photosynthesis",
+                  "correct": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

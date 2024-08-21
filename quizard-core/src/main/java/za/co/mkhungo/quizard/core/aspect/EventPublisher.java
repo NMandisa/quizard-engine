@@ -2,6 +2,7 @@ package za.co.mkhungo.quizard.core.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.springframework.stereotype.Component;
 import za.co.mkhungo.quizard.core.event.QuizCreatedEvent;
 import za.co.mkhungo.quizard.core.event.QuizUpdatedEvent;
 import za.co.mkhungo.quizard.core.model.Quiz;
@@ -9,6 +10,7 @@ import za.co.mkhungo.quizard.core.model.Quiz;
 /**
  * @author Noxolo.Mkhungo
  */
+@Component
 public class EventPublisher {
     @AfterReturning(pointcut = "execution(* QuizService.createQuiz(..))")
     public void publishQuizCreatedEvent(JoinPoint joinPoint) {

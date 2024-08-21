@@ -1,0 +1,70 @@
+{
+  "quizzes": [
+    {
+      "quizId": 1,
+      "title": "My Quiz",
+      "categories": [
+        {
+          "categoryId": 1,
+          "name": "History",
+          "questions": [
+            {
+              "questionId": 1,
+              "text": "What year did World War II start?",
+              "options": [
+                {
+                  "optionId": 1,
+                  "text": "1939",
+                  "correct": true
+                },
+                {
+                  "optionId": 2,
+                  "text": "1945",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "questionId": 2,
+              "text": "Who was the first President of the United States?",
+              "options": [
+                {
+                  "optionId": 1,
+                  "text": "George Washington",
+                  "correct": true
+                },
+                {
+                  "optionId": 2,
+                  "text": "Thomas Jefferson",
+                  "correct": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "categoryId": 2,
+          "name": "Science",
+          "questions": [
+            {
+              "questionId": 3,
+              "text": "What is the process by which plants make food?",
+              "options": [
+                {
+                  "optionId": 1,
+                  "text": "Respiration",
+                  "correct": false
+                },
+                {
+                  "optionId": 2,
+                  "text": "Photosynthesis",
+                  "correct": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

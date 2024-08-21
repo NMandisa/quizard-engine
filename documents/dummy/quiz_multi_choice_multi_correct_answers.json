@@ -1,0 +1,30 @@
+{
+  "quiz_id": 123,
+  "title": "History Quiz",
+  "questions": [
+    {
+      "question_id": 1,
+      "text": "Which of the following events occurred during World War II?",
+      "type": "multi_choice",
+      "options": [
+        {
+          "text": "The Battle of Normandy",
+          "correct": true
+        },
+        {
+          "text": "The Battle of Gettysburg",
+          "correct": false
+        },
+        {
+          "text": "The D-Day Invasion",
+          "correct": true
+        },
+        {
+          "text": "The Battle of Waterloo",
+          "correct": false
+        }
+      ],
+      "multi_correct": true
+    }
+  ]
+}

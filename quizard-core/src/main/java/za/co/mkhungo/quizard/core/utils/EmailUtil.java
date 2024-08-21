@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
  * @author Noxolo.Mkhungo
  */
 @Component
-public class EmailUtil {
+public final class EmailUtil {
 
     private final JavaMailSender mailSender;
     @Autowired
-    public EmailUtil(JavaMailSender mailSender) {
+    private EmailUtil(JavaMailSender mailSender) {
         this.mailSender = mailSender;
     }
 

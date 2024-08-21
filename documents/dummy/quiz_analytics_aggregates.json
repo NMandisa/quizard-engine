@@ -1,0 +1,50 @@
+{
+  "quiz": {
+    "total_users": 100,
+    "total_quizzes_taken": 500,
+    "average_score": 70,
+    "average_completion_time": 30
+  },
+  "questions": {
+    "total": 1000,
+    "types": {
+      "multiple_choice": 600,
+      "true_false": 200,
+      "open_ended": 200
+    },
+    "difficulty_levels": {
+      "easy": 300,
+      "medium": 400,
+      "hard": 300
+    },
+    "categories": {
+      "history": 200,
+      "science": 300,
+      "sports": 500
+    }
+  },
+  "answers": {
+    "total": 5000,
+    "correct": 3500,
+    "incorrect": 1500,
+    "distribution": {
+      "most_common": "option A",
+      "least_common": "option D"
+    }
+  },
+  "analytics": {
+    "user_engagement": {
+      "time_spent_on_quiz": 30,
+      "completion_rate": 80
+    },
+    "score_distribution": {
+      "average": 70,
+      "highest": 100,
+      "lowest": 20
+    },
+    "question_performance": {
+      "easiest": "question 1",
+      "hardest": "question 10"
+    }
+  }
+}

@@ -3,10 +3,7 @@ package za.co.mkhungo.quizard.core.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import za.co.mkhungo.quizard.core.model.quiz.Answer;
-import za.co.mkhungo.quizard.core.model.quiz.Category;
-import za.co.mkhungo.quizard.core.model.quiz.Question;
-import za.co.mkhungo.quizard.core.model.quiz.QuizSession;
+import za.co.mkhungo.quizard.core.model.quiz.*;
 
 import java.io.Serializable;
 import java.util.List;
@@ -23,6 +20,9 @@ public class Quiz implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long quizId;
+
+    @OneToOne
+    private QuizMode mode;
 
     @Column(name = "title")
     private String title;
@@ -42,8 +42,11 @@ public class Quiz implements Serializable {
     private List<Question> questions;
 
     @OneToMany(mappedBy = "quiz")
-    private List<QuizSession> gameSession;
+    private List<QuizSession> quizSessions;
 
     @OneToMany(mappedBy = "quiz")
-    private List<Answer> answers;
+    private List<QuizSubmission> quizSubmissions;
+
+
+
 }

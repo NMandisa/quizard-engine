@@ -1,0 +1,29 @@
+{
+  "quiz_id": 123,
+  "title": "History Quiz",
+  "mode": {
+    "type": "timed",
+    "duration": 30,
+    "questions": [
+      {
+        "question_id": 1,
+        "type": "multiple_choice",
+        "options": [
+          {
+            "text": "Option A",
+            "correct": true
+          },
+          {
+            "text": "Option B",
+            "correct": false
+          }
+        ]
+      },
+      {
+        "question_id": 2,
+        "type": "true_false",
+        "correct_answer": true
+      }
+    ]
+  }
+}

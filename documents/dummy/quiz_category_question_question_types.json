@@ -1,0 +1,84 @@
+{
+  "quizzes": [
+    {
+      "quizId": 1,
+      "title": "My Quiz",
+      "categories": [
+        {
+          "categoryId": 1,
+          "name": "History",
+          "questions": [
+            {
+              "questionId": 1,
+              "text": "What year did World War II start?",
+              "type": "multiple-choice",
+              "options": [
+                {
+                  "optionId": 1,
+                  "text": "1939",
+                  "correct": true
+                },
+                {
+                  "optionId": 2,
+                  "text": "1945",
+                  "correct": false
+                }
+              ]
+            },
+            {
+              "questionId": 2,
+              "text": "Describe the significance of the Treaty of Versailles.",
+              "type": "text-written",
+              "answer": "The Treaty of Versailles was a peace settlement imposed on Germany after World War I, which led to widespread resentment and contributed to the rise of Nazi Germany."
+            },
+            {
+              "questionId": 3,
+              "text": "Who was the first President of the United States?",
+              "type": "multiple-choice-1-correction",
+              "options": [
+                {
+                  "optionId": 1,
+                  "text": "George Washington",
+                  "correct": true
+                },
+                {
+                  "optionId": 2,
+                  "text": "Thomas Jefferson",
+                  "correct": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "categoryId": 2,
+          "name": "Science",
+          "questions": [
+            {
+              "questionId": 4,
+              "text": "What is the process by which plants make food?",
+              "type": "multiple-choice-multiple-correction",
+              "options": [
+                {
+                  "optionId": 1,
+                  "text": "Respiration",
+                  "correct": false
+                },
+                {
+                  "optionId": 2,
+                  "text": "Photosynthesis",
+                  "correct": true
+                },
+                {
+                  "optionId": 3,
+                  "text": "Decomposition",
+                  "correct": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

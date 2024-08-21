@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "quiz_analytics")
-public class QuizAnalytics {
+public class Analytics {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,7 +37,7 @@ public class QuizAnalytics {
 
     @ManyToMany
     @JoinTable(
-            name = "Game_Analytics_Game_Modes",
+            name = "quiz_analytics_quiz_modes",
             joinColumns = @JoinColumn(name = "quiz_analytics_id"),
             inverseJoinColumns = @JoinColumn(name = "quiz_mode_id")
     )

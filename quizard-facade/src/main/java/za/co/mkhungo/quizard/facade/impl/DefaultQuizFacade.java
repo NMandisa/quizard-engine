@@ -1,5 +1,6 @@
 package za.co.mkhungo.quizard.facade.impl;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
@@ -11,6 +12,7 @@ import za.co.mkhungo.quizard.facade.QuizFacade;
 /**
  * @author Noxolo.Mkhungo
  */
+@Slf4j
 @Component
 public class DefaultQuizFacade implements QuizFacade {
     private final ApplicationEventPublisher eventPublisher;

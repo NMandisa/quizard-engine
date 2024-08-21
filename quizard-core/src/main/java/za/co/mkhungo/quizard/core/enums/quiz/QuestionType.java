@@ -1,0 +1,11 @@
+package za.co.mkhungo.quizard.core.enums.quiz;
+
+/**
+ * @author Noxolo.Mkhungo
+ */
+public enum QuestionType {
+    MULTIPLE_CHOICE, TRUE_FALSE, OPEN_ENDED, FILL_IN_THE_BLANK,
+    MATCHING, SHORT_ANSWER, ESSAY, RANKING, SCALING, DRAG_AND_DROP,
+    HOT_SPOT, AUDIO, VIDEO, FILE_UPLOAD, MATRIX,
+    LIKERT_SCALE, SEMANTIC_DIFFERENTIAL, CONSTANT_SUM
+}

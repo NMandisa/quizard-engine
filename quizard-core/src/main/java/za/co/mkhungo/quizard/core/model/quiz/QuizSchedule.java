@@ -1,6 +1,8 @@
 package za.co.mkhungo.quizard.core.model.quiz;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import za.co.mkhungo.quizard.core.model.Quiz;
 import za.co.mkhungo.quizard.core.model.Reminder;
 
@@ -11,13 +13,16 @@ import java.util.List;
 /**
  * @author Noxolo.Mkhungo
  */
+@Getter
+@Setter
 @Entity
 @Table(name = "Quiz_Schedules")
 public class QuizSchedule {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long quizScheduleId;
+    @Column(name = "quiz_schedule_id")
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "Quiz_ID")

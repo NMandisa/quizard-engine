@@ -1,25 +1,31 @@
 package za.co.mkhungo.quizard.core.model.quiz;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import za.co.mkhungo.quizard.core.enums.quiz.mode.Mode;
+import za.co.mkhungo.quizard.core.model.Quiz;
 
 /**
  * @author Noxolo.Mkhungo
  */
-
+@Getter
+@Setter
 @Entity
-@Table(name = "quiz_modes", uniqueConstraints = {
-        @UniqueConstraint(columnNames = {"quiz_mode_name"})
-})
+@Table(name = "quiz_modes")
 public class QuizMode {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long quizModeId;
+    @Column(name = "quiz_mode_id")
+    private Long id;
 
-    @Column(name = "quiz_mode_name")
-    private String quizModeName;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "mode")
+    private Mode mode;
+
     @OneToOne
-    private QuizModeCategory quizModeCategory;
-
+    @JoinColumn(name = "quiz_id")
+    private Quiz quiz;
 
 }
