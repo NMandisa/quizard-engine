@@ -1,4 +1,4 @@
-package za.co.mkhungo.quizard.core;
+package za.co.mkhungo.quizard.core.config.security;
 
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.core.Authentication;
@@ -11,7 +11,7 @@ import java.util.Optional;
  * @author Noxolo.Mkhungo
  */
 @Component
-public class SpringSecurityAuditorAware implements AuditorAware<String> {
+public class SecurityAuditorAware implements AuditorAware<String> {
     @Override
     public Optional<String> getCurrentAuditor() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
