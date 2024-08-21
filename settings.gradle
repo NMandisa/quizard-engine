@@ -16,4 +16,4 @@ include 'quizard-web-services:leaderboard-api'
 include 'quizard-web-services:quiz-api'
 include 'quizard-web-services:social-sharing-api'
 include 'quizard-web-services:user-api'
-
+include 'quizard-api-models'

@@ -1,1 +1,2 @@
-rootProject = 'quizard-facade'
+parent.project('quizard-engine')
+rootProject.name = 'quizard-facade'
