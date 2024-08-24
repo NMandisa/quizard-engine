@@ -1,9 +1,9 @@
-package za.co.mkhungo.quizard.request;
+package za.co.mkhungo.quizard.dto;
 
 /**
  * @author Noxolo.Mkhungo
  */
-public class CreateQuestionRequest {
+public class QuestionDTO {
    /*
    - questionText (String)
     - questionType (QuestionType)

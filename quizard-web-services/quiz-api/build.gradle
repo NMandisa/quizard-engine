@@ -2,5 +2,4 @@ group = 'za.co.mkhungo.quizard'
 version = '0.0.1-SNAPSHOT'
 dependencies {
     implementation project(':quizard-services:quiz-service')
-    implementation project(':quizard-api-models')
 }

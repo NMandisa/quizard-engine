@@ -24,11 +24,11 @@ public class AnalyticsController extends QuizRootController{
 
     @GetMapping("/analytics")
     public ResponseEntity<QuizAnalyticsResponse> getAnalytics(){
-        return ResponseEntity.ok(quizService.getQuizAnalyticsResponse());
+        return ResponseEntity.ok(quizService.getQuizAnalytics());
     }
 
     @PostMapping("{id}/analytics")
     public ResponseEntity<QuizAnalyticsResponse> getAnalytics(@PathVariable("id") Long quizId){
-        return ResponseEntity.ok(quizService.getQuizByIdAnalyticsResponse(quizId));
+        return ResponseEntity.ok(quizService.getQuizByIdAnalytics(quizId));
     }
 }

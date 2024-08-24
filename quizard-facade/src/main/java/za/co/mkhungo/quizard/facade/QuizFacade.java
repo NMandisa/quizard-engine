@@ -1,13 +1,13 @@
 package za.co.mkhungo.quizard.facade;
 
 
-import za.co.mkhungo.quizard.core.model.Quiz;
+import za.co.mkhungo.quizard.dto.QuizDTO;
 
 /**
  * @author Noxolo.Mkhungo
  */
 
 public interface QuizFacade {
-    Quiz createQuiz(Quiz quiz);
-    Quiz updateQuiz(Quiz quiz);
+    QuizDTO createQuiz(QuizDTO quizDTO);
+    QuizDTO updateQuiz(QuizDTO quizDTO);
 }

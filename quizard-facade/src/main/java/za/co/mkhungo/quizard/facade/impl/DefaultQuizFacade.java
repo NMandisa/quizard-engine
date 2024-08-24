@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import za.co.mkhungo.quizard.core.event.QuizCreatedEvent;
 import za.co.mkhungo.quizard.core.event.QuizUpdatedEvent;
 import za.co.mkhungo.quizard.core.model.Quiz;
+import za.co.mkhungo.quizard.dto.QuizDTO;
 import za.co.mkhungo.quizard.facade.QuizFacade;
 
 /**
@@ -23,17 +24,17 @@ public class DefaultQuizFacade implements QuizFacade {
     }
 
     @Override
-    public Quiz createQuiz(Quiz quiz) {
+    public QuizDTO createQuiz(QuizDTO quizDTO) {
         // Create the quiz logic here
         Quiz createdQuiz = null; // save quiz to database or perform creation logic
         eventPublisher.publishEvent(new QuizCreatedEvent(createdQuiz));
-        return createdQuiz;
+        return null;
     }
     @Override
-    public Quiz updateQuiz(Quiz quiz) {
+    public QuizDTO updateQuiz(QuizDTO quizDTO) {
         // Update the quiz logic here
         Quiz updatedQuiz = null; // save quiz to database or perform update logic
         eventPublisher.publishEvent(new QuizUpdatedEvent(updatedQuiz));
-        return updatedQuiz;
+        return null;
     }
 }

@@ -2,11 +2,11 @@ package za.co.mkhungo.quizard.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import za.co.mkhungo.quizard.dto.QuizDTO;
 import za.co.mkhungo.quizard.facade.QuizFacade;
 import za.co.mkhungo.quizard.response.QuizAnalyticsResponse;
 import za.co.mkhungo.quizard.response.QuizResponse;
 import za.co.mkhungo.quizard.service.QuizService;
-import za.co.mkhungo.quizard.vo.QuizVO;
 
 /**
  * @author Noxolo.Mkhungo
@@ -25,7 +25,7 @@ public class DefaultQuizService implements QuizService {
      * @return QuizAnalyticsResponse Quiz Analytics Response
      */
     @Override
-    public QuizAnalyticsResponse getQuizAnalyticsResponse() {
+    public QuizAnalyticsResponse getQuizAnalytics() {
         return null;
     }
 
@@ -33,17 +33,17 @@ public class DefaultQuizService implements QuizService {
      * @return QuizAnalyticsResponse Quiz Analytics Response
      */
     @Override
-    public QuizAnalyticsResponse getQuizByIdAnalyticsResponse(Long quizId) {
+    public QuizAnalyticsResponse getQuizByIdAnalytics(Long quizId) {
         return null;
     }
 
     /**
-     * @param quizVO Quiz Value Object
+     * @param quizDTO Quiz Data Transfer Object
      * @return QuizResponse Quiz Response
      */
     @Override
-    public QuizResponse createQuiz(QuizVO quizVO) {
-        //quizFacade.createQuiz(quizVO);
+    public QuizResponse createQuiz(QuizDTO quizDTO) {
+        quizFacade.createQuiz(quizDTO);
         return null;
     }
 }

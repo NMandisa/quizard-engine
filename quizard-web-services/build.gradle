@@ -21,6 +21,7 @@ subprojects {
     }
 
     dependencies {
+        implementation project(':quizard-api-models')
         implementation (group: 'org.springframework', name: 'spring-web', version: '6.1.11'){
             exclude(module: 'commons-logging')
         }
